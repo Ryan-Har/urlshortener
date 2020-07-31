@@ -1,0 +1,2 @@
+FLASK_APP=urlshortener.py
+FLASK_ENV=development

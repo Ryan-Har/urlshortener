@@ -1,0 +1,2 @@
+pip3 flask
+pip3 python-dotenv
