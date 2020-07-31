@@ -1,4 +1,5 @@
 from app import app
+from flask import render_template
 
 @app.route('/')
 @app.route('/index')
@@ -7,4 +8,5 @@ def index():
 
 @app.route('/test')
 def test():
-    return "<h1>TESTING</h1>"
+    return render_template('index.html')
+
