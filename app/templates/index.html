@@ -1,12 +1,42 @@
 {% extends 'base.html' %}
 
-{% block test %}
+{% block content %}
 
-<p>block test</p>
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <h1 class="title">Shortnr.io</h1>
+    </div>    
+</div>
+<form action="/makeurl", method="POST">
 
-{% endblock %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+        </div>
+    <div class="col-10">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Paste URL here and shortn." aria-label="Paste URL here." aria-describedby="basic-addon2" name="input">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">Shortn</button>
+            </div>
+        </div>
+    </div>
+        <div class="col">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+        </div>
+    <div class="col-10">
+        <div class="errormsg d-flex justify-content-center">{{ error }}{{ msg }}
+        </div>
+    </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
 
-{% block foo %}
-<h1>block foo test</h1>
-{% endblock %}
+</form>
+{% endblock %} 
+
 
