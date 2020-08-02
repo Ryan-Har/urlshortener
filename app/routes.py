@@ -21,6 +21,6 @@ def sendurl():
             return render_template('shortenedurl.html', url = input)
         else:
             return render_template('index.html', error = input, msg = ' is not a valid url')
-            #return redirect('/index')
+
     #print(uploadURL, file=sys.stderr)
     #print('This is standard output', file=sys.stdout)

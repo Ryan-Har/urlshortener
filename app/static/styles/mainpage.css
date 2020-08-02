@@ -1,8 +1,14 @@
 .title {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
+    font-family: 'Mukta', sans-serif;
+}
+
+#body {
+    font-family: 'Roboto', sans-serif;
 }
 
 .errormsg {
     color: red;
 }
+
