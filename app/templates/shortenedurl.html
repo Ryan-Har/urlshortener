@@ -2,6 +2,26 @@
 
 {% block content %}
 
-<h3>your input was {{ url }}</h3>
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <h1 class="title">Shortn.io</h1>
+    </div>    
+</div>
 
-{% endblock %}
+<div class="container" id=body>
+    <div class="row">
+        <div class="col">
+        </div>
+    <div class="col-10">
+        <div class="d-flex justify-content-center">
+            <h3>Your Shortn URL is <a href="https://shortn.io/{{url}}"> https://shortn.io/{{url}}</a></h3> 
+        </div>  
+    </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
+
+{% endblock %} 
+
+
