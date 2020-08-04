@@ -15,7 +15,7 @@ def index():
             dbfunction.addUrl(generatedId, input)
             return render_template('shortenedurl.html', url = generatedId)
         else:
-            return render_template('index.html', error = input, msg = ' is not a valid url')    
+            return render_template('index.html', error = input, msg = ' is not a valid url, please ensure it starts with "http(s)://"')    
     else:
         return render_template('index.html')
 
