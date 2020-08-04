@@ -21,8 +21,11 @@ def addUrl(generatedId, fullUrl): #adds data to the database
     con.commit()
     pass
 
-def getUrl():
-    pass
+def getUrl(id):
+    command = f"SELECT url FROM `urls` WHERE `ID` = '{id}';"
+    cursor.execute(command)
+    x = cursor.fetchone()
+    return str(x)
 
 def getID(): # gets random 6 character id, ensures that it doesn't exist in the db already
     id = generateID()

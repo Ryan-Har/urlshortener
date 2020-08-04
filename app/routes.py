@@ -20,3 +20,12 @@ def sendurl():
             return render_template('shortenedurl.html', url = generatedId)
         else:
             return render_template('index.html', error = input, msg = ' is not a valid url')
+
+@app.route('/<shorturl>')
+def forward(shorturl):
+    if dbfunction.checkIfIdExists(shorturl):
+        longurl = dbfunction.getUrl(shorturl)
+        slicedLongUrl = longurl[2:-3] #sliced to get usable url. Unable to get this working in the function
+        return redirect(slicedLongUrl)
+    else:
+        return render_template('index.html', error = shorturl, msg = 'is not a valid extension')
